@@ -54,7 +54,6 @@
                     <imageName>${docker.image.prefix}/${project.artifactId}</imageName>
 			        <imageTags>
 			          <imageTag>${project.version}</imageTag>
-			          <imageTag>latest</imageTag>
 			        </imageTags>
                     <baseImage>java:8</baseImage>
                     <entryPoint>["java", "-Djava.security.egd=file:/dev/./urandom", "-jar", "/${project.build.finalName}.jar"]</entryPoint>
@@ -67,8 +66,8 @@
                         </resource>
                     </resources>
                     <image>${docker.image.prefix}/${project.artifactId}</image>
-                    <newName>${docker.repo}/${docker.image.prefix}/${project.artifactId}</newName>
-                    <imageName>${docker.repo}/${docker.image.prefix}/${project.artifactId}</imageName>
+                    <newName>${docker.repo}/${project.artifactId}</newName>
+                    <imageName>${docker.repo}/${project.artifactId}</imageName>
                 </configuration>
             </plugin>
         </plugins>
