@@ -17,7 +17,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
         <docker.image.prefix>demo</docker.image.prefix>
-        <docker.repo>192.168.0.22:5000</docker.repo>
+        <docker.repo>192.168.0.209:5000</docker.repo>
         <docker.volumes>/tmp</docker.volumes>
     </properties>
   
