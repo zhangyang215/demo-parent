@@ -17,8 +17,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
         <docker.image.prefix>demo</docker.image.prefix>
-        <docker.repo>192.168.0.209:5000</docker.repo>
-        <docker.volumes>/tmp</docker.volumes>
+        <docker.repo>172.31.87.111:5000</docker.repo>
     </properties>
   
   <dependencies>
@@ -58,7 +57,6 @@
 			          <imageTag>latest</imageTag>
 			        </imageTags>
                     <baseImage>java:8</baseImage>
-                    <volumes>${docker.volumes}</volumes>
                     <entryPoint>["java", "-Djava.security.egd=file:/dev/./urandom", "-jar", "/${project.build.finalName}.jar"]</entryPoint>
                     <cmd>["--spring.profiles.active=docker"]</cmd>
                     <resources>
